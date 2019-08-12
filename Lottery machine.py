@@ -1,26 +1,28 @@
+#Lottery machine
 import random
 
-num1=int(input("Enter Your First Number : "))
-num2=int(input("Enter Your Second Number : "))
-num3=int(input("Enter Your Third Number : "))
-num4=int(input("Enter Your Foth Number : "))
-num5=int(input("Enter Your Fifth Number : "))
+num1=int(input("Enter your first number : "))
+num2=int(input("Enter your second number : "))
+num3=int(input("Enter your third number : "))
+num4=int(input("Enter your foth number : "))
+num5=int(input("Enter your fifth number : "))
 
+X=[num1,num2,num3,num4,num5] #Users number list
+Y=[]# Random Numbers List
+Z=[]# Matched Numbers List
 
-X = [num1,num2,num3,num4,num5]
-Y = []
-Z = []
+print("Your Numbers : ",X)
 
-print("Your Number are ",X)
-
+#make 5 rondom numbers
 for i in range (5):
-    Y.append(random.randrange(1,5,2))
+    Y.append(random.randrange(1,50,2))
 
-print("Lott Numbers ",Y)
+print("Lottery Numbers : ",Y)
 
-def match(i):
-    if X[i]==Y[i]:
-        Z.append(X[i])
+#Numbers Matching 
+def match(x):
+    if X[x]==Y[x]:
+        Z.append(X[x])
 
 match(0)
 match(1)
@@ -28,5 +30,4 @@ match(2)
 match(3)
 match(4)
 
-print("You Have ",len(Z)," Matches")
-    
+print ("You have",len(Z),"Matches")
